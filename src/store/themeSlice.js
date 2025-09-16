@@ -13,7 +13,7 @@ const themeSlice = createSlice({
       localStorage.setItem("theme", state.darkMode ? "dark" : "light");
     
       if (state.darkMode) {
-        document.documentElement.classList.add("dark");
+        document.documentElement.classList.add("dark"); //document.documentElement
       } else {
         document.documentElement.classList.remove("dark");
       }
