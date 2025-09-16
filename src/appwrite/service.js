@@ -50,7 +50,7 @@ export class Service {
       console.log("Appwrite serive :: updatePost :: error", error);
     }
   }
-
+ 
   async deletePost(slug) {
     try {
       await this.databases.deleteDocument(
@@ -64,7 +64,7 @@ export class Service {
       return false;
     }
   }
-
+ 
   async getPost(slug) {
     try {
       return await this.databases.getDocument(
@@ -91,7 +91,7 @@ export class Service {
     }
   }
 
-  // file upload service
+  // file upload service 
   async uploadFile(file) {
     try {
       return await this.bucket.createFile(

@@ -21,7 +21,7 @@ function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white dark:bg-gray-900 shadow-md">
+    <header className="sticky top-0 z-50 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-gray-900 dark:via-gray-800 dark:to-black shadow-lg transition-colors duration-300">
       <Container>
         <nav className="flex items-center justify-between py-3">
           <Link to="/" className="flex items-center">
@@ -44,7 +44,7 @@ function Header() {
                   <li key={item.name}>
                     <button
                       onClick={() => navigate(item.slug)}
-                      className="px-3 py-2 rounded-md text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+                     className="px-4 py-2 rounded-lg text-white dark:text-gray-200 hover:bg-white/20 dark:hover:bg-gray-700 transition-all duration-300 hover:scale-105"
                     >
                       {item.name}
                     </button>
@@ -69,7 +69,7 @@ function Header() {
         </nav>
 
         {menuOpen && (
-          <ul className="md:hidden flex flex-col gap-2 py-3 text-sm font-medium">
+          <ul className="md:hidden flex flex-col gap-2 py-4 px-3 text-sm font-medium bg-gradient-to-b from-indigo-600 via-purple-600 to-pink-600 dark:from-gray-900 dark:via-gray-800 dark:to-black shadow-md rounded-lg animate-slideDown">
             {navItems.map(
               (item) =>
                 item.active && (
@@ -79,7 +79,7 @@ function Header() {
                         navigate(item.slug);
                         setMenuOpen(false);
                       }}
-                      className="w-full text-left px-3 py-2 rounded-md text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+                      className="w-full text-left px-4 py-2 rounded-lg text-white dark:text-gray-200 hover:bg-white/20 dark:hover:bg-gray-700 transition-all duration-300 hover:scale-105"
                     >
                       {item.name}
                     </button>
@@ -87,7 +87,7 @@ function Header() {
                 )
             )}
             {authStatus && (
-              <li className="hover:bg-red-500">
+              <li className="hover:bg-red-600 rounded-lg transition duration-300">
                 <LogoutBtn />
               </li>
             )}

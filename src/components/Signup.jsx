@@ -27,24 +27,24 @@ function Signup() {
     }
 
   return (
-    <div className="flex items-center justify-center w-full">
-            <div className={`mx-auto w-full max-w-lg bg-gray-100 rounded-xl p-10 border border-black/10`}>
+    <div className="flex items-center justify-center w-full ">
+            <div className="mx-auto w-full max-w-lg bg-white text-gray-900 dark:bg-gray-800 dark:text-gray-100 rounded-2xl p-10 shadow-xl border border-gray-200 dark:border-gray-700 transition-all duration-300">
             <div className="mb-2 flex justify-center">
                     <span className="inline-block w-full max-w-[100px]">
                         <Logo width="100%" />
                     </span>
                 </div>
                 <h2 className="text-center text-2xl font-bold leading-tight">Sign up to create account</h2>
-                <p className="mt-2 text-center text-base text-black/60">
+                <p className="mt-1 text-center text-base text-gray-600 dark:text-gray-300">
                     Already have an account?&nbsp;
                     <Link
                         to="/login"
-                        className="font-medium text-primary transition-all duration-200 hover:underline"
+                        className="font-medium text-blue-600 dark:text-blue-400 hover:underline transition-all"
                  >
                         Sign In
                     </Link>
                 </p>
-                {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
+                {error && <p className="text-red-600 mt-6 text-center">{error}</p>}
 
                 <form onSubmit={handleSubmit(create)}>
                     <div className='space-y-5'>
@@ -74,7 +74,7 @@ function Signup() {
                         {...register("password", {
                             required: true,})}
                         />
-                        <Button type="submit" className="w-full  bg-blue-500 hover:bg-blue-700">
+                       <Button type="submit" className="w-full py-3 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white rounded-xl font-semibold shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300">
                             Create Account
                         </Button>
                     </div>

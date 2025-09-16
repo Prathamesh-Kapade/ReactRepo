@@ -27,10 +27,9 @@ function Login() {
   };
 
   return (
-    <div className="flex items-center justify-center w-full pt-8 pb-8">
-      <div
-        className={`mx-auto w-full max-w-lg bg-gray-100 rounded-xl p-10 border border-black/10`}
-      >
+    <div className="flex items-center justify-center min-h-[68vh] w-full bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-gray-900 dark:via-gray-800 dark:to-black px-4">
+      <div className="mx-auto w-full max-w-md bg-white text-gray-900 dark:bg-gray-800 dark:text-gray-100 rounded-2xl p-8 shadow-xl border border-gray-200 dark:border-gray-700">
+
         <div className="mb-2 flex justify-center">
           <span className="inline-block w-full max-w-[100px]">
             <Logo width="100%" />
@@ -39,7 +38,7 @@ function Login() {
         <h2 className="text-center text-2xl font-bold leading-tight">
           Sign in to your account
         </h2>
-        <p className="mt-2 text-center text-base text-black/60">
+        <p className="mt-2 text-center text-base text-white/60">
           Don&apos;t have any account?&nbsp;
           <Link
             to="/signup"
@@ -72,7 +71,7 @@ function Login() {
                 required: true,
               })}
             />
-            <Button type="submit" className="w-full  bg-blue-500 hover:bg-blue-700" >
+            <Button type="submit" className="w-full py-3 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white rounded-xl font-semibold shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300">
               Sign in
             </Button>
           </div>
